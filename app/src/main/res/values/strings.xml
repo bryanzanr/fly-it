@@ -12,4 +12,17 @@
     <!- -->
     <!--<string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>-->
     <string name="interstitial_ad_unit_id">ca-app-pub-2667938700445321/2318037502</string>
+
+    <string name="first">First Name</string>
+    <string name="last">Last Name</string>
+    <string name="merchant">Merchant Name</string>
+    <string name="mail">E-Mail Address</string>
+    <string name="pass">Password</string>
+    <string name="repeat">Repeat Password</string>
+
+    <string name="invalid">Wrong Email or Password</string>
+    <string name="network">Network Connection Error</string>
+    <string name="success">User registered successfully</string>
+    <string name="failed">Repeated password is not same</string>
+
 </resources>

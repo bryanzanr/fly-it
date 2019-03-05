@@ -1,4 +1,4 @@
-package com.arsyady.flyit.merchant
+package com.arsyady.flyit.merchant.activity
 
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.KeyEvent
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import com.arsyady.flyit.merchant.R
 //import android.view.Menu
 //import android.view.MenuItem
 //import android.widget.Toast

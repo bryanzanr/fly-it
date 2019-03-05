@@ -1,8 +1,9 @@
-package com.arsyady.flyit.merchant
+package com.arsyady.flyit.merchant.activity
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
+import com.arsyady.flyit.merchant.R
 
 class SplashActivity : AppCompatActivity() {
     private var mDelayHandler: Handler? = null
