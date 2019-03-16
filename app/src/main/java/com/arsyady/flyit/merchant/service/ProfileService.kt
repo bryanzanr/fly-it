@@ -1,5 +1,6 @@
 package com.arsyady.flyit.merchant.service
 
+import okhttp3.RequestBody
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
@@ -21,6 +22,18 @@ interface ProfileService {
                                  @Field("email") email: String,
                         @Field("password") password: String,
                                  @Field("repeat_password") repeat_password: String): Call<ResponseBody>
+
+    @FormUrlEncoded
+    @POST("profile/")
+    fun profileRequest(@Field("token") token: String): Call<ResponseBody>
+
+    @Multipart
+    @POST("edit/")
+    fun editRequest(@Part("first_name") first_name: String,
+                        @Part("last_name") last_name: String,
+                        @Part("merchant_name") merchant_name: String,
+                        @Part("token") token: String,
+                        @Part("profpic") profpic: RequestBody): Call<ResponseBody>
 
 //    @GET("semuadosen")
 //    abstract fun getSemuaDosen(): Call<ResponseDosen>

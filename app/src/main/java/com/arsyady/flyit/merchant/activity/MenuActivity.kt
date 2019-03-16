@@ -18,10 +18,13 @@ class MenuActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
+//        Toast.makeText(this@MenuActivity, intent.getStringExtra("token"), Toast.LENGTH_LONG).show()
+        val token = intent.getStringExtra("token")
+
 //        val mainGrid = findViewById<View>(R.id.mainGrid) as GridLayout
 
         //Set Event
-        setSingleEvent(mainGrid)
+        setSingleEvent(mainGrid, token)
         //setToggleEvent(mainGrid);
     }
 
@@ -45,15 +48,21 @@ class MenuActivity : AppCompatActivity(){
         }
     }
 
-    private fun setSingleEvent(mainGrid: GridLayout) {
+    private fun setSingleEvent(mainGrid: GridLayout, token: String) {
         //Loop all child item of Main Grid
         for (i in 0 until mainGrid.childCount) {
             //You can see , all child item is CardView , so we just cast object to CardView
             val cardView = mainGrid.getChildAt(i) as CardView
             cardView.setOnClickListener {
-                val intent = Intent(this@MenuActivity, MainActivity::class.java)
-                intent.putExtra("info", "This is activity from card item index  $i")
-                startActivity(intent)
+                if (i == 2){
+                    val intent = Intent(this@MenuActivity, MapsActivity::class.java)
+                    startActivity(intent)
+                }else{
+                    val intent = Intent(this@MenuActivity, MainActivity::class.java)
+                    intent.putExtra("token", token)
+                    intent.putExtra("info", "This is activity from card item index  $i")
+                    startActivity(intent)
+                }
             }
         }
     }

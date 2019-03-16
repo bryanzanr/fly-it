@@ -25,4 +25,29 @@
     <string name="success">User registered successfully</string>
     <string name="failed">Repeated password is not same</string>
 
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="submit">History</string>
+    <string name="dokumen">Document</string>
+    <string name="gambar">Image</string>
+    <string name="logout">Logout</string>
+    <string name="faq">FAQ</string>
+    <string name="contact">Contact Us</string>
+    <string name="example_manager_id">123456</string>
+    <string name="example_manager_current_role">Superior</string>
+    <string name="example_manager_join_on">Join on 10/11/2012</string>
+    <string name="title_profile">Profile</string>
+    <string name="download">Edit Profile</string>
+    <string name="statistic">Statistics</string>
+    <string name="task">Task Done</string>
+    <string name="trigger">test</string>
+    <string name="weight">Total Weight</string>
+    <string name="kirim">Submit Document</string>
+    <string name="upload">Upload Image</string>
+    <string name="title_activity_maps">Map</string>
+
 </resources>

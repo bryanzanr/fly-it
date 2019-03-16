@@ -25,4 +25,30 @@
     <string name="success">Pengguna berhasil mendaftar</string>
     <string name="failed">Pengulangan kata sandi salah</string>
 
+    <string name="title_home">Rumah</string>
+    <string name="title_dashboard">Dasbor</string>
+    <string name="title_notifications">Notifikasi</string>
+    <string name="nav_header_title">Studi Robot</string>
+    <string name="nav_header_subtitle">Robot.studi@robot.co.id</string>
+    <string name="nav_header_desc">Kepala Navigasi</string>
+    <string name="submit">Sejarah</string>
+    <string name="dokumen">Dokumen</string>
+    <string name="gambar">Foto</string>
+    <string name="logout">Keluar</string>
+    <string name="faq">Bantuan</string>
+    <string name="contact">Hubungi Kami</string>
+    <string name="example_manager_id">654321</string>
+    <string name="example_manager_current_role">Boss</string>
+    <string name="example_manager_join_on">Bergabung pada 12/11/2010</string>
+    <string name="title_profile">Profil</string>
+    <string name="download">Ubah Profil</string>
+    <string name="statistic">Statistik</string>
+    <string name="task">Tugas Selesai</string>
+    <string name="trigger">Tes</string>
+    <string name="weight">Berat Total</string>
+    <string name="kirim">Kirim Dokumen</string>
+    <string name="upload">Unggah Foto</string>
+
+    <string name="title_activity_maps">Peta</string>
+
 </resources>
