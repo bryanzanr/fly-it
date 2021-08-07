@@ -13,6 +13,9 @@
     <!--<string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>-->
     <string name="interstitial_ad_unit_id">ca-app-pub-2667938700445321/2318037502</string>
 
+    <string name="username">Nama User</string>
+    <string name="role">Posisi</string>
+
     <string name="first">Nama Awal</string>
     <string name="last">Nama Akhir</string>
     <string name="merchant">Nama Penjual</string>
