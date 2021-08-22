@@ -54,13 +54,21 @@ class MenuActivity : AppCompatActivity(){
             //You can see , all child item is CardView , so we just cast object to CardView
             val cardView = mainGrid.getChildAt(i) as CardView
             cardView.setOnClickListener {
-                if (i == 2){
-                    val intent = Intent(this@MenuActivity, MapsActivity::class.java)
-                    startActivity(intent)
-                }else{
-                    val intent = Intent(this@MenuActivity, MainActivity::class.java)
-                    intent.putExtra("token", token)
-                    intent.putExtra("info", "This is activity from card item index  $i")
+                var intent: Intent
+                when (i) {
+                    0 -> {
+                        intent = Intent(this@MenuActivity, WebActivity::class.java)
+                    }
+                    2 -> {
+                        intent = Intent(this@MenuActivity, MapsActivity::class.java)
+                    }
+                    else -> {
+                        intent = Intent(this@MenuActivity, MainActivity::class.java)
+                        intent.putExtra("token", token)
+                        intent.putExtra("info", "This is activity from card item index  $i")
+                    }
+                }
+                if (intent != Intent()) {
                     startActivity(intent)
                 }
             }

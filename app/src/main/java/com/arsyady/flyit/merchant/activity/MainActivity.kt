@@ -48,7 +48,6 @@ import android.widget.ImageView
 class MainActivity : AppCompatActivity() {
 
     private var currentLevel: Int = 0
-    private var interstitialAd: InterstitialAd? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,23 +55,6 @@ class MainActivity : AppCompatActivity() {
 
         // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
         MobileAds.initialize(this, "ca-app-pub-2667938700445321~9427081770")
-
-        // Create the next level button, which tries to show an interstitial when clicked.
-//        next_level_button.isEnabled = false
-//        next_level_button.setOnClickListener { showInterstitial() }
-
-        // Create the text view to show the level number.
-//        currentLevel = START_LEVEL
-
-        // Create the InterstitialAd and set the adUnitId (defined in values/strings.xml).
-//        interstitialAd = newInterstitialAd()
-//        loadInterstitial()
-
-//        val myWebView: WebView = findViewById(R.id.webview)
-//        myWebView.webViewClient = WebViewClient()
-//        (WebViewClient())
-//        myWebView.settings.javaScriptEnabled = true
-//        myWebView.loadUrl("http://flyit.arsyady.com:8000/")
 
 //        Toast.makeText(this@MainActivity, intent.getStringExtra("token"), Toast.LENGTH_LONG).show()
         val token = intent.getStringExtra("token")
@@ -162,49 +144,6 @@ class MainActivity : AppCompatActivity() {
 //                R.id.action_settings -> true
 //                else -> super.onOptionsItemSelected(item)
 //            }
-
-    private fun newInterstitialAd(): InterstitialAd {
-        return InterstitialAd(this).apply {
-            adUnitId = getString(R.string.interstitial_ad_unit_id)
-            adListener = object : AdListener()
-            {
-                // Proceed to the next level.
-//                override fun onAdLoaded() {
-//                    next_level_button.isEnabled = true
-//                }
-//
-//                override fun onAdFailedToLoad(errorCode: Int) {
-//                    next_level_button.isEnabled = true
-//                }
-//
-//                override fun onAdClosed() {
-//                    goToNextLevel()
-//                }
-            }
-        }
-    }
-
-    private fun showInterstitial() {
-        // Show the ad if it's ready. Otherwise toast and reload the ad.
-        if (interstitialAd?.isLoaded == true) {
-            interstitialAd?.show()
-        }
-        else {
-//            Toast.makeText(this, "Ad did not load", Toast.LENGTH_SHORT).show()
-//            goToNextLevel()
-            interstitialAd = newInterstitialAd()
-            loadInterstitial()
-        }
-    }
-
-    private fun loadInterstitial() {
-        // Disable the next level button and load the ad.
-//        next_level_button.isEnabled = false
-        val adRequest = AdRequest.Builder()
-                .setRequestAgent("android_studio:ad_template")
-                .build()
-        interstitialAd?.loadAd(adRequest)
-    }
 
     // Show the next level and reload the ad to prepare for the level after.
 //    private fun goToNextLevel() {
